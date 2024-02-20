@@ -1,4 +1,4 @@
-- 👋 Hi, I’m @zubisheikh07
+- 👋 Hey
 
 <!---
 zubisheikh07/zubisheikh07 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
