@@ -14,15 +14,15 @@ const Header = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm">
+    <header className="sticky top-0 z-50 backdrop-blur-md bg-black/80 border-b border-purple-500/30 shadow-lg">
       <div className="container">
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="bg-black text-white px-3 py-2 rounded-lg font-bold text-xl">
+          <Link to="/" className="flex items-center space-x-3 group">
+            <div className="bg-gradient-to-br from-purple-500 to-purple-700 text-white px-4 py-2 rounded-lg font-bold text-xl neon-glow group-hover:scale-110 transition-all duration-300">
               F
             </div>
-            <span className="serif-heading text-2xl font-bold text-black">
+            <span className="futuristic-heading text-2xl font-bold">
               freewithzubee
             </span>
           </Link>
@@ -33,41 +33,41 @@ const Header = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className={`font-medium transition-colors hover:text-gray-900 ${
+                className={`tech-text font-medium text-lg transition-all duration-300 hover:text-purple-300 hover:scale-110 ${
                   location.pathname === item.href
-                    ? "text-black border-b-2 border-black pb-1"
-                    : "text-gray-600"
+                    ? "text-purple-300 border-b-2 border-purple-400 pb-1 glow"
+                    : "text-white/90"
                 }`}
               >
                 {item.name}
               </Link>
             ))}
-            <Link to="/contact" className="btn-primary ml-4">
+            <Link to="/contact" className="btn-primary ml-6">
               Get In Touch
             </Link>
           </nav>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2"
+            className="md:hidden p-2 text-white hover:text-purple-300 transition-colors hover:scale-110"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-200">
-            <nav className="flex flex-col space-y-4">
+          <div className="md:hidden py-6 border-t border-purple-500/30 bg-black/90 backdrop-blur-lg">
+            <nav className="flex flex-col space-y-6">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`font-medium transition-colors ${
+                  className={`tech-text font-medium text-lg transition-colors hover:text-purple-300 ${
                     location.pathname === item.href
-                      ? "text-black font-bold"
-                      : "text-gray-600"
+                      ? "text-purple-300 font-bold"
+                      : "text-white/90"
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
