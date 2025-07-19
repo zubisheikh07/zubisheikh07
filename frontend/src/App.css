@@ -3,8 +3,9 @@
 
 /* Root Variables */
 :root {
-  --color-primary: #ECEC75;
-  --color-primary-dark: #e6e67c;
+  --color-primary: #9CAF88;
+  --color-primary-dark: #8A9F7A;
+  --color-accent: #7A8F6A;
   --color-black: #0f172a;
   --color-gray-50: #f8fafc;
   --color-gray-600: #64748b;
